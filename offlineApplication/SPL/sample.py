@@ -1,0 +1,9 @@
+import numpy
+def mainFunction():
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    matrixTranspose = numpy.transpose(matrix)
+
+    print(type(matrixTranspose))
+
+if __name__ == "__main__":
+    mainFunction()
