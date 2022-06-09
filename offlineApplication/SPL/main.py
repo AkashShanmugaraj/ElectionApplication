@@ -35,7 +35,7 @@ class MainScreenSPL(QWidget):
         brush.setStyle(Qt.SolidPattern)
         palette.setBrush(QPalette.Active, QPalette.Window, brush)
         self.setPalette(palette)
-        self.setGeometry(0, 0, 1500, 847)
+        self.setGeometry(0, 0, 1360, 768)
         self.setWindowTitle('Election Application - Vidhya Niketan')
 
         # Frame1
@@ -76,10 +76,6 @@ class MainScreenSPL(QWidget):
         self.eventfilterassignment(object=self.CandiImg2, index=2, subdir=self.searchDirectory)
 
         # Candidate
-        if 'Face3.png' in os.listdir(os.getcwd()+self.searchDirectory):
-            print('Yes')
-        else:
-            print('No')
         self.CandiImg3 = QLabel(self.CandidateFrame)
         self.CandiImg3.setGeometry(QRect(720, 100, 261, 261))
         self.CandiImg3.setPixmap(QPixmap(os.getcwd() + self.searchDirectory + "/Face3.png"))

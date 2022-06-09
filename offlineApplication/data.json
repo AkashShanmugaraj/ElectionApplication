@@ -1,1 +1,31 @@
-{"maleSPL": {"candidate1": {"name": "q", "votes": 0}, "candidate2": {"name": "w", "votes": 2}, "candidate3": {"name": "e", "votes": 0}, "candidate4": {"name": "r", "votes": 1}, "candidate5": {"name": "t", "votes": 1}, "candidate6": {"name": "y", "votes": 2}}, "femaleSPL": {"candidate1": {"name": "a", "votes": 2}, "candidate2": {"name": "s", "votes": 4}}, "maleASPL": {}, "femaleASPL": {}, "maleCHERA": {}, "femaleCHERA": {}, "maleCHOLA": {}, "femaleCHOLA": {}, "malePANDYA": {}, "femalePANDYA": {}, "malePALLAVA": {}, "femalePALLAVA": {}, "maleCulturalSEC": {}, "femaleCulturalSEC": {}, "SwachBarathCoord": {}}
+{
+    "maleSPL": {},
+    "femaleSPL": {},
+    "maleASPL": {},
+    "femaleASPL": {},
+    "maleCHERA": {},
+    "femaleCHERA": {},
+    "maleCHOLA": {
+        "candidate1": {
+            "name": "CholaBoy1",
+            "votes": 0
+        }
+    },
+    "femaleCHOLA": {
+        "candidate1": {
+            "name": "CholaGirl1",
+            "votes": 0
+        },
+        "candidate2": {
+            "name": "CholaGirl2",
+            "votes": 0
+        }
+    },
+    "malePANDYA": {},
+    "femalePANDYA": {},
+    "malePALLAVA": {},
+    "femalePALLAVA": {},
+    "maleCulturalSEC": {},
+    "femaleCulturalSEC": {},
+    "SwachBarathCoord": {}
+}

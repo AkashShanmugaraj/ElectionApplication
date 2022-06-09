@@ -1,4 +1,5 @@
 import json
+import time
 def save_firebase():
 	import firebase_admin
 	a = open('electionvnps-firebase-adminsdk-3ypv5-52c9b529b4.json')
@@ -66,4 +67,6 @@ def definedict():
 	f.close()
 
 if __name__ == '__main__':
-    definedict()
+	definedict()
+	print('New Candidates were updated!')
+	time.sleep(5)
