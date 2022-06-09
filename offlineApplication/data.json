@@ -1,17 +1,1 @@
-{
-    "maleSPL": {},
-    "femaleSPL": {},
-    "maleASPL": {},
-    "femaleASPL": {},
-    "maleCHERA": {},
-    "femaleCHERA": {},
-    "maleCHOLA": {},
-    "femaleCHOLA": {},
-    "malePANDYA": {},
-    "femalePANDYA": {},
-    "malePALLAVA": {},
-    "femalePALLAVA": {},
-    "maleCulturalSEC": {},
-    "femaleCulturalSEC": {},
-    "SwachBarathCoord": {}
-}
+{"maleSPL": {}, "femaleSPL": {}, "maleASPL": {"candidate1": {"name": "one", "votes": 1}}, "femaleASPL": {"candidate1": {"name": "two", "votes": 1}}, "maleCHERA": {}, "femaleCHERA": {}, "maleCHOLA": {}, "femaleCHOLA": {}, "malePANDYA": {}, "femalePANDYA": {}, "malePALLAVA": {}, "femalePALLAVA": {}, "maleCulturalSEC": {}, "femaleCulturalSEC": {}, "SwachBarathCoord": {}}
