@@ -1,4 +1,5 @@
 import json
+import time
 def result(post):
     f = open('data.json', 'r')
     data = json.load(f)
@@ -8,8 +9,11 @@ def result(post):
 
     for i in post_candidates:
         votes.append(post_dict[i]['votes'])
-    highest = max(votes)
-
+    try:
+        highest = max(votes)
+    except:
+        highest = 0
+        print('The post is empty')
     votesindex = []
     for i in votes:
         if i == highest:
@@ -25,5 +29,23 @@ def result(post):
         for i in range(len(votesindex)):
             print("Name: "+ post_dict[f'candidate{votesindex[i] + 1}']['name'])
         print(f'Everyone above secured {highest} votes each')
+    print('\n\n')
 
+
+# Function call
+result('maleSPL')
 result('femaleSPL')
+result('maleASPL')
+result('femaleASPL')
+result('maleCHERA')
+result('femaleCHERA')
+result('maleCHOLA')
+result('femaleCHOLA')
+result('malePANDYA')
+result('femalePANDYA')
+result('malePALLAVA')
+result('femalePALLAVA')
+result('maleCulturalSEC')
+result('femaleCulturalSEC')
+result('SwachBarathCoord')
+time.sleep(5)

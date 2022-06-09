@@ -17,7 +17,7 @@ class MainScreenSPL(QWidget):
     ref = db.reference("/")
 
     # Some variables to get started
-    searchDirectory = '/maleCandidate'
+    searchDirectory = '/personCandidate'
     nominatedMale = 0
     nominatedfemale = 0
     candidict = ref.get()
@@ -150,7 +150,7 @@ class MainScreenSPL(QWidget):
                 r = conf_prompt.exec_()
 
                 pass
-            self.searchDirectory = '/maleCandidate'
+            self.searchDirectory = '/personCandidate'
             self.mainText.setText('Choose your \nMale \nCandidate\n[SPL]')
             self.mainText.adjustSize()
             self.CandiImg1.setPixmap(QPixmap(os.getcwd() + self.searchDirectory + "/Face1.png"))
@@ -181,7 +181,7 @@ class MainScreenSPL(QWidget):
 
     def eventFilter(self, object, event):
         if event.type() == QEvent.Enter:
-            if self.searchDirectory == '/maleCandidate':
+            if self.searchDirectory == '/personCandidate':
                 if object == self.CandiImg1:
                     self.namePlate.setText(self.candidict['maleSPL']['candidate1']['name'])
                 elif object == self.CandiImg2:
