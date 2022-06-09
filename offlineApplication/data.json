@@ -5,22 +5,8 @@
     "femaleASPL": {},
     "maleCHERA": {},
     "femaleCHERA": {},
-    "maleCHOLA": {
-        "candidate1": {
-            "name": "CholaBoy1",
-            "votes": 0
-        }
-    },
-    "femaleCHOLA": {
-        "candidate1": {
-            "name": "CholaGirl1",
-            "votes": 0
-        },
-        "candidate2": {
-            "name": "CholaGirl2",
-            "votes": 0
-        }
-    },
+    "maleCHOLA": {},
+    "femaleCHOLA": {},
     "malePANDYA": {},
     "femalePANDYA": {},
     "malePALLAVA": {},
