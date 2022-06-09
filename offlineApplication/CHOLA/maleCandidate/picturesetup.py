@@ -41,7 +41,7 @@ def askPicture(index, savepath):
         askPicture(index)
     
 
-print('You are about to setup images for SPL Candidate - Male')
+print('You are about to setup images for CHOLA Candidate - Male')
 candi = int(input('Enter number of candidates: '))
 for i in range(1,candi+1):
     askPicture(i, '/')
