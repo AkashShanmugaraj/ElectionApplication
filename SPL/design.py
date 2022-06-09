@@ -1,4 +1,5 @@
 # do `pip install PyQt5`
+# do `pip install PyQt5`
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
@@ -17,7 +18,7 @@ class MainScreenSPL(QWidget):
     ref = db.reference("/")
 
     # Some variables to get started
-    searchDirectory = '/personCandidate'
+    searchDirectory = '/maleCandidate'
     nominatedMale = 0
     nominatedfemale = 0
     candidict = ref.get()
@@ -150,7 +151,7 @@ class MainScreenSPL(QWidget):
                 r = conf_prompt.exec_()
 
                 pass
-            self.searchDirectory = '/personCandidate'
+            self.searchDirectory = '/maleCandidate'
             self.mainText.setText('Choose your \nMale \nCandidate\n[SPL]')
             self.mainText.adjustSize()
             self.CandiImg1.setPixmap(QPixmap(os.getcwd() + self.searchDirectory + "/Face1.png"))
@@ -181,7 +182,7 @@ class MainScreenSPL(QWidget):
 
     def eventFilter(self, object, event):
         if event.type() == QEvent.Enter:
-            if self.searchDirectory == '/personCandidate':
+            if self.searchDirectory == '/maleCandidate':
                 if object == self.CandiImg1:
                     self.namePlate.setText(self.candidict['maleSPL']['candidate1']['name'])
                 elif object == self.CandiImg2:
