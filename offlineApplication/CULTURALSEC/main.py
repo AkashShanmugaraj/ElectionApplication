@@ -6,7 +6,7 @@ import sys,os,json
 class MainScreenCulturalSEC(QWidget):
     f = open('../data.json')
     # Some variables to get started
-    searchDirectory = '/personCandidate'
+    searchDirectory = '/maleCandidate'
     nominatedMale = 0
     nominatedfemale = 0
     candidict = json.load(f)
@@ -144,7 +144,7 @@ class MainScreenCulturalSEC(QWidget):
                 r = conf_prompt.exec_()
 
                 pass
-            self.searchDirectory = '/personCandidate'
+            self.searchDirectory = '/maleCandidate'
             self.mainText.setText('Choose your \nMale \nCandidate\n[CulturalSEC]')
             self.mainText.adjustSize()
             self.CandiImg1.setPixmap(QPixmap(os.getcwd() + self.searchDirectory + "/Face1.png"))
@@ -176,7 +176,7 @@ class MainScreenCulturalSEC(QWidget):
     def eventFilter(self, object, event):
         try:
             if event.type() == QEvent.Enter:
-                if self.searchDirectory == '/personCandidate':
+                if self.searchDirectory == '/maleCandidate':
                     if object == self.CandiImg1:
                         self.namePlate.setText(self.candidict['maleCulturalSEC']['candidate1']['name'])
                     elif object == self.CandiImg2:
