@@ -3,7 +3,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import sys,os,json
 
-class MainScreenASPL(QWidget):
+class MainScreenPALLAVA(QWidget):
     f = open('../data.json')
     # Some variables to get started
     searchDirectory = '/maleCandidate'
@@ -50,7 +50,7 @@ class MainScreenASPL(QWidget):
         font.setFamily("SF Pro Display")
         font.setPointSize(39)
         self.mainText.setFont(font)
-        self.mainText.setText('Choose your \nMale \nCandidate\n[ASPL]')
+        self.mainText.setText('Choose your \nMale \nCandidate\n[PALLAVA]')
 
 
         
@@ -133,19 +133,19 @@ class MainScreenASPL(QWidget):
         if self.searchDirectory == "/femaleCandidate":
             self.nominatedfemale = candidateindex
             prompt = QMessageBox(icon=QMessageBox.Question,
-                                 text=f'You have choosen to nominate {self.candidict["maleASPL"][f"candidate{self.nominatedMale}"]["name"]} and {self.candidict["femaleASPL"][f"candidate{self.nominatedfemale}"]["name"]}\nContinue?')
+                                 text=f'You have choosen to nominate {self.candidict["malePALLAVA"][f"candidate{self.nominatedMale}"]["name"]} and {self.candidict["femalePALLAVA"][f"candidate{self.nominatedfemale}"]["name"]}\nContinue?')
             prompt.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
             returned = prompt.exec_()
             if returned == 16384:
-                vote(self.candidict, self.nominatedfemale, 'femaleASPL')
-                vote(self.candidict, self.nominatedMale, 'maleASPL')
+                vote(self.candidict, self.nominatedfemale, 'femalePALLAVA')
+                vote(self.candidict, self.nominatedMale, 'malePALLAVA')
                 conf_prompt = QMessageBox(text='Vote Sucessfully Casted')
                 conf_prompt.setStandardButtons(QMessageBox.Ok)
                 r = conf_prompt.exec_()
 
                 pass
             self.searchDirectory = '/maleCandidate'
-            self.mainText.setText('Choose your \nMale \nCandidate\n[ASPL]')
+            self.mainText.setText('Choose your \nMale \nCandidate\n[PALLAVA]')
             self.mainText.adjustSize()
             self.CandiImg1.setPixmap(QPixmap(os.getcwd() + self.searchDirectory + "/Face1.png"))
             self.CandiImg2.setPixmap(QPixmap(os.getcwd() + self.searchDirectory + "/Face2.png"))
@@ -157,7 +157,7 @@ class MainScreenASPL(QWidget):
         else:
             self.nominatedMale = candidateindex
             self.searchDirectory = '/femaleCandidate'
-            self.mainText.setText('Choose your \nFemale \nCandidate\n[ASPL]')
+            self.mainText.setText('Choose your \nFemale \nCandidate\n[PALLAVA]')
             self.mainText.adjustSize()
             self.namePlate.setText('<hover again for name>')
             self.adjustSize()
@@ -178,30 +178,30 @@ class MainScreenASPL(QWidget):
             if event.type() == QEvent.Enter:
                 if self.searchDirectory == '/maleCandidate':
                     if object == self.CandiImg1:
-                        self.namePlate.setText(self.candidict['maleASPL']['candidate1']['name'])
+                        self.namePlate.setText(self.candidict['malePALLAVA']['candidate1']['name'])
                     elif object == self.CandiImg2:
-                        self.namePlate.setText(self.candidict['maleASPL']['candidate2']['name'])
+                        self.namePlate.setText(self.candidict['malePALLAVA']['candidate2']['name'])
                     elif object == self.CandiImg3:
-                        self.namePlate.setText(self.candidict['maleASPL']['candidate3']['name'])
+                        self.namePlate.setText(self.candidict['malePALLAVA']['candidate3']['name'])
                     elif object == self.CandiImg4:
-                        self.namePlate.setText(self.candidict['maleASPL']['candidate4']['name'])
+                        self.namePlate.setText(self.candidict['malePALLAVA']['candidate4']['name'])
                     elif object == self.CandiImg5:
-                        self.namePlate.setText(self.candidict['maleASPL']['candidate5']['name'])
+                        self.namePlate.setText(self.candidict['malePALLAVA']['candidate5']['name'])
                     elif object == self.CandiImg6:
-                        self.namePlate.setText(self.candidict['maleASPL']['candidate6']['name'])
+                        self.namePlate.setText(self.candidict['malePALLAVA']['candidate6']['name'])
                 elif self.searchDirectory == '/femaleCandidate':
                     if object == self.CandiImg1:
-                        self.namePlate.setText(self.candidict['femaleASPL']['candidate1']['name'])
+                        self.namePlate.setText(self.candidict['femalePALLAVA']['candidate1']['name'])
                     elif object == self.CandiImg2:
-                        self.namePlate.setText(self.candidict['femaleASPL']['candidate2']['name'])
+                        self.namePlate.setText(self.candidict['femalePALLAVA']['candidate2']['name'])
                     elif object == self.CandiImg3:
-                        self.namePlate.setText(self.candidict['femaleASPL']['candidate3']['name'])
+                        self.namePlate.setText(self.candidict['femalePALLAVA']['candidate3']['name'])
                     elif object == self.CandiImg4:
-                        self.namePlate.setText(self.candidict['femaleASPL']['candidate4']['name'])
+                        self.namePlate.setText(self.candidict['femalePALLAVA']['candidate4']['name'])
                     elif object == self.CandiImg5:
-                        self.namePlate.setText(self.candidict['femaleASPL']['candidate5']['name'])
+                        self.namePlate.setText(self.candidict['femalePALLAVA']['candidate5']['name'])
                     elif object == self.CandiImg6:
-                        self.namePlate.setText(self.candidict['femaleASPL']['candidate6']['name'])
+                        self.namePlate.setText(self.candidict['femalePALLAVA']['candidate6']['name'])
                 self.namePlate.adjustSize()
 
             elif QEvent.Leave == event.type():
@@ -238,5 +238,5 @@ def vote(dict, candi_index, post):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = MainScreenASPL()
+    ex = MainScreenPALLAVA()
     sys.exit(app.exec_())
